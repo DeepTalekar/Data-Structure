@@ -13,16 +13,19 @@ void main()
     printf("So let me know the how much integer datatypes you want me to sort:\n");
     scanf("%d", &length);
 
+    // Creating an array using calloc i.e. array for the user defined length
     int *array = (int *) calloc (length, sizeof(int));
 
+    // Accepting the data elements for the array
     printf("Now you can enter the integers:\n");
     for ( i = 0; i < length; i++)
     {
         scanf("%d", &array[i]);
     }
     
+    // Implementing the Bubble Sort (in Ascending Order)
     bubbleSort(array, length);
-
+    // Printing the Sorted elements
     print(array, length);
 
     printf("Thanks for investing time in me!!\n");
@@ -36,7 +39,8 @@ void bubbleSort(int a[], int n)
     for ( i = 0; i < n - 1; i++)
     {
         for ( j = 0; j < n - 1 - i; j++)
-        {
+        {   
+            // Sorting the array in ascending order
             if (a[j] > a[j+1])
             {
                 temp = a[j];

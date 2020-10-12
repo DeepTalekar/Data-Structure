@@ -13,16 +13,20 @@ void main()
     printf("So let me know the how much integer datatypes you want me to sort:\n");
     scanf("%d", &length);
 
+    // Creating an array using calloc i.e. array for the user defined length
     int *array = (int *) calloc (length, sizeof(int));
 
+    // Accepting the data elements for the array
     printf("Now you can enter the integers:\n");
     for ( i = 0; i < length; i++)
     {
         scanf("%d", &array[i]);
     }
 
+    // Implemention the Selection Sort (in Ascending Order)
     selectionSort(array, length);
-
+    
+    // Printing the Sorted elements
     print(array, length);
 }
 
